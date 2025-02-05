@@ -15,8 +15,34 @@
     Grandes Telas: acima de 1200px
 */
 
+/*CELULAR PAISAGEM*/
+@media screen and (orientation: landscape) {
+       
+    section#login {
+        width: 80vw; /*cresce a largura*/
+        height: 280px;
+    }
+
+    /*jogando a imagem para o lado esquerdo*/
+    section#login > div#imagem {
+        float: left;
+        width: 30%;
+        height: 100%;
+
+        background-position: center center;
+    }
+
+    section#login > div#formulario {
+        float: right;
+        width: 70%;
+       
+    }
+}
+
+
+
 /*TABLET*/
-@media screen and (orientation:landscape) and (min-width: 768px) and (max-width: 992px) {
+@media screen and (min-width: 768px) and (max-width: 992px) {
     body {
         background-image: linear-gradient(to top, #913012, #e97a1f);
     }
