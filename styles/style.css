@@ -1,0 +1,153 @@
+@charset "UTF-8";
+
+/*
+    PALETA DE CORES
+    Verde: #49a09d
+    Lilas: #5f2c82
+
+    Laranja: ##e97a1f
+    Avermelhado: #913012
+*/
+
+/* MOBILE FIRST */
+
+* {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body, html {
+    background-color: #913012;
+    height: 100vh;
+    width: 100vw;
+
+}
+
+main {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+}
+
+section#login {
+    /*posicionando no meio da tela*/
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    
+    overflow: hidden; /*tudo que estiver fora da borda fica escondido*/
+    background-color: white;
+    width: 250px;
+    height: 515px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /*sem deslocamento para os lados, 10 de espalhamento e preto*/
+
+    transform: translate(-50%, -50%);
+    transition: width 0.3s, height 0.3s; /*criando animação quando mudar de media query*/
+    transition-timing-function: ease; /*suavizar animação*/
+}
+
+section#login > div#imagem {
+    display: block;
+    background: #944d12 url(../imagens/pexels-suissounet-1200450.jpg) no-repeat;
+    background-size: cover;
+    background-position: left bottom;
+    height: 200px;
+}
+
+section#login > div#formulario {
+    display: block;
+    padding: 10px;
+}
+
+div#formulario > h1 {
+    text-align: center;
+    margin-top: 10px;
+}
+
+div#formulario > p {
+    text-align: justify;
+    font-size: 0.9em;
+}
+
+div.campo {
+    display: block;
+    background-color: #913012;
+    border: 2px solid #913012;
+    width: 100%;
+    height: 40px;
+    border-radius: 8px;
+    margin: 5px 0px; /*cima e baixo 5px, esquerda e direita 0px*/
+}
+
+div.campo > label {
+    display: none;
+}
+
+div.campo > span {
+    color: white;
+    /*background-color: black;*/
+    font-size: 2em;
+    width: 40px;
+    padding: 5px;
+}
+
+div.campo > input {
+    background-color:rgb(218, 155, 96);
+    font-size: 1em;
+    width: calc(100% - 45px); 
+    height: 100%;
+    border: none;
+    border-radius: 8px;
+    padding: 4px;
+    transform: translateY(-12.5px); /*subindo a caixa de input*/
+
+}
+
+/*ao digitar, a caixa em foco fica branca*/
+div.campo > input:focus-within {
+    background-color: white;
+}
+
+form > input[type=submit] {
+    display: block;
+    font-size: 1em;
+    width: 100%;
+    height: 40px;
+    background-color: #e97a1f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form > input[type=submit]:hover {
+    background-color: #5e1f0c;
+
+}
+
+form > a.botao {
+    display: block;
+    text-align: center;
+    font-size: 1em;
+    width: 100%;
+    height: 40px;
+    margin-top: 5px;
+    padding-top: 5px;
+    background-color: white;
+    color: #5e1f0c;
+    border: 1px solid #913012;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+form > a.botao:hover {
+    background-color: #b98271;
+}
+
+form > a.botao > i {
+    font-size: 0.8em;
+}
